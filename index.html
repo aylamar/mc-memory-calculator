@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <script src="js/memory_calc.js"></script>
+
+    <title>Minecraft Calculators</title>
+  </head>
+  <body onload=calcMemory()>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Memory Calculator</a>
+          </li>
+      </ul>
+  </nav>
+
+    <div class="container">
+        <h1 class="display-6">Memory Recommendations</h1>
+
+        <p>I plan on running Minecaft version
+        <select id="MCVersion" onchange=calcMemory()>
+          <option value="modern">1.13+</option>
+          <option value="legacy"><1.12.2</option>
+        </select> with
+        
+        <input type="number" id="maxPlayers" min=1 max=100 value=5 style="width:50px" onchange=calcMemory()>
+        players online at once and a view distance of
+        
+        <input type="number" id="viewDistance" value=10 min=3 max=32 style="width:50px"onchange=calcMemory()>.
+        </p>
+
+        <p>
+          So I need about <b id="output"></b> of memory.
+        </p>    
+    </div>
+  </body>
+</html>
